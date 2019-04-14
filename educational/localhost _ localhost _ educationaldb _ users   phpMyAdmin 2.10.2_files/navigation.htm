@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en"><head>
+    <link rel="icon" href="http://localhost/phpMyAdmin/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://localhost/phpMyAdmin/favicon.ico" type="image/x-icon">
+    <title>phpMyAdmin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- base href="http://localhost/phpMyAdmin/navigation.php?server=1&db=educationaldb&table=&lang=en-utf-8&collation_connection=utf8_unicode_ci" -->
+    <link rel="stylesheet" type="text/css" href="navigation_data/phpmyadmin.css">
+    <script type="text/javascript" src="navigation_data/navigation.js"></script>
+    <script type="text/javascript">
+    // <![CDATA[
+    var image_minus = './themes/original/img/b_minus.png';
+    var image_plus = './themes/original/img/b_plus.png';
+    // ]]>
+    </script>
+        <!--[if IE 6]>
+    <style type="text/css">
+    /* <![CDATA[ */
+    html {
+        overflow-y: scroll;
+    }
+    /* ]]> */
+    </style>
+    <![endif]-->
+</head>
+
+<body id="body_leftFrame" onload="PMA_setFrameSize();" onresize="PMA_saveFrameSize();">
+<div id="pmalogo">
+<a href="http://localhost/phpMyAdmin/main.php?db=educationaldb&amp;token=2685c8bb9254f679378e3fb41263dfce" target="frame_content"><img src="navigation_data/logo_left.png" alt="phpMyAdmin" id="imgpmalogo"></a>
+</div>
+<div id="leftframelinks">
+<a href="http://localhost/phpMyAdmin/main.php?db=educationaldb&amp;token=2685c8bb9254f679378e3fb41263dfce" title="Home"><img class="icon" src="navigation_data/b_home.png" alt="Home" width="16" height="16"></a>
+<a href="http://localhost/phpMyAdmin/index.php?db=educationaldb&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;old_usr=root" target="_parent" title="Log out"><img class="icon" src="navigation_data/s_loggoff.png" alt="Log out" width="16" height="16"></a>
+<a href="http://localhost/phpMyAdmin/querywindow.php?db=educationaldb&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;no_js=true" title="Query window" onclick="javascript:window.parent.open_querywindow(); return false;"><img class="icon" src="navigation_data/b_selboard.png" alt="Query window" width="16" height="16"></a>
+    <a href="http://localhost/phpMyAdmin/Documentation.html" target="documentation" title="phpMyAdmin documentation"><img class="icon" src="navigation_data/b_docs.png" alt="phpMyAdmin documentation" width="16" height="16"></a>
+    <a href="http://dev.mysql.com/doc/refman/5.0/en/index.html" target="mysql_doc"><img class="icon" src="navigation_data/b_sqlhelp.png" alt="Documentation" title="Documentation" width="16" height="16"></a>
+</div>
+
+    <div id="databaseList">
+    <form method="post" action="index.php" target="_parent" id="left">
+    <label for="lightm_db">Database</label>
+    <input type="hidden" name="token" value="2685c8bb9254f679378e3fb41263dfce">
+
+<select name="db" id="lightm_db" xml:lang="en" dir="ltr" onchange="if (this.value != '') window.parent.openDb(this.value);">
+<option value="" dir="ltr">(Databases) ...</option>
+<option value="address_book" title="">address_book (1)</option>
+<option value="educationaldb" title="" selected="selected">educationaldb (2)</option>
+<option value="esouq" title="">esouq (6)</option>
+<option value="mis" title="">mis (7)</option>
+<option value="mysql" title="">mysql (17)</option>
+<option value="phonebook_db" title="">phonebook_db (1)</option>
+<option value="phpmyadmin" title="">phpmyadmin (7)</option>
+<option value="stuact" title="">stuact (13)</option>
+<option value="test" title="">test (0)</option>
+<option value="user" title="">user (0)</option>
+</select>
+<noscript>
+<input type="submit" name="Go" value="Go" />
+</noscript>
+</form>
+</div>
+
+<div id="left_tableList">
+    <p><a class="item" href="http://localhost/phpMyAdmin/db_structure.php?db=educationaldb&amp;token=2685c8bb9254f679378e3fb41263dfce" title="">
+    educationaldb <bdo dir="ltr">(2)</bdo> </a></p><ul id="subel0"><li>
+<a title="Browse:  (0 Rows)" id="browse_educationaldb.games" href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;table=games&amp;goto=tbl_structure.php"><img class="icon" src="navigation_data/b_sbrowse.png" id="icon_educationaldb.games" alt="Browse" width="10" height="10"></a>
+<a href="http://localhost/phpMyAdmin/tbl_structure.php?db=educationaldb&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;table=games" title=" (0 Rows)" id="educationaldb.games">games</a></li>
+<li class=" marked">
+<a title="Browse: (2 Rows)" id="browse_educationaldb.users" href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;table=users&amp;goto=tbl_structure.php"><img class="icon" src="navigation_data/b_sbrowse.png" id="icon_educationaldb.users" alt="Browse" width="10" height="10"></a>
+<a href="http://localhost/phpMyAdmin/tbl_structure.php?db=educationaldb&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;table=users" title="(2 Rows)" id="educationaldb.users">users</a></li>
+</ul></div></body></html>

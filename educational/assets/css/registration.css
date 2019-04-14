@@ -1,0 +1,57 @@
+
+body
+{
+
+	background-image: url(../images/background.png);
+	background-size:cover;
+
+}
+.nav_button{
+    height:34px;
+    margin:0 auto;
+    margin-right:10px;
+    float:left;
+}
+.forms input{
+			 height:55px;
+			 width:350px;
+			 margin-left:20px;
+			 margin-top:15px;
+			 border-radius:6px;
+			 opacity: 0.8;
+			 font-size:28px;
+			 text-indent:10px;
+			}
+		
+.forms button {
+			 height:35px;
+			 width:280px;
+			 margin-left:20px;
+			 margin-top:20px;
+			 border-radius:6px;
+			 background-color:green;
+			 border:0px;
+			opacity: 1;
+			color:white;
+			cursor:pointer;
+			font-size:15px;
+			}
+#Register{
+font-size:30px;
+		height:650px;
+		width:530px;
+		background:black;
+		color:white;
+		opacity: 0.5;
+		box-shadow:0px 0px 25px #050505;
+		margin-left:600px;
+		margin-top:200px;
+		border-radius:10px;
+		}
+.text{
+			 color:white;
+		font-size:40px;
+		text-align:center;
+		
+	
+		}

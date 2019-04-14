@@ -1,0 +1,68 @@
+body{
+	background-image: url(../images/background.png);
+	background-size:cover;
+
+	
+	}
+	#login{
+		height:350px;
+		width:330px;
+		background:black;
+		opacity: 0.5;
+		box-shadow:0px 0px 25px #050505;
+		margin-left:600px;
+		margin-top:200px;
+		border-radius:10px;
+		}
+		.text{
+			 color:white;
+		font-size:35px;
+		text-align:center;
+		padding-top:40px;
+		height:60px;
+		}
+		
+		.forms input{
+			 height:30px;
+			 width:280px;
+			 margin-left:20px;
+			 margin-top:15px;
+			 border-radius:6px;
+			 opacity: 0.8;
+			 font-size:18px;
+			 text-indent:10px;
+			}
+		.forms button {
+			 height:35px;
+			 width:280px;
+			 margin-left:20px;
+			 margin-top:20px;
+			 border-radius:6px;
+			 background-color:green;
+			 border:0px;
+			opacity: 1;
+			color:white;
+			cursor:pointer;
+			font-size:15px;
+			}
+			.rem 
+			{ color:white;
+			
+				}
+				.rem input{
+				 margin-top:15px;
+				 margin-left:20px;
+					}
+		.container {
+		background:black;
+		box-shadow:0px 0px 25px #050505;
+    padding: 16px;
+}
+.have{
+color:white;}
+span.psw {
+        display: block;
+        float: none;
+		color:white;
+		
+    }

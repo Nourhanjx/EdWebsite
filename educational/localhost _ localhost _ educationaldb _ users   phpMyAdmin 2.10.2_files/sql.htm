@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en"><head>
+    <link rel="icon" href="http://localhost/phpMyAdmin/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://localhost/phpMyAdmin/favicon.ico" type="image/x-icon">
+    <title>phpMyAdmin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="sql_data/phpmyadmin.css">
+    <link rel="stylesheet" type="text/css" href="sql_data/print.css" media="print">
+    <script type="text/javascript" language="javascript">
+    // <![CDATA[
+    // Updates the title of the frameset if possible (ns4 does not allow this)
+    if (typeof(parent.document) != 'undefined' && typeof(parent.document) != 'unknown'
+        && typeof(parent.document.title) == 'string') {
+        parent.document.title = 'localhost / localhost / educationaldb / users | phpMyAdmin 2.10.2';
+    }
+    
+    // js form validation stuff
+    var errorMsg0   = 'Missing value in the form!';
+    var errorMsg1   = 'This is not a number!';
+    var noDropDbMsg = '';
+    var confirmMsg  = 'Do you really want to ';
+    var confirmMsgDropDB  = 'You are about to DESTROY a complete database!';
+    // ]]>
+    </script>
+    <script src="sql_data/functions.js" type="text/javascript" language="javascript"></script>
+        
+    <script src="sql_data/tooltip.js" type="text/javascript" language="javascript"></script>
+    <meta name="OBGZip" content="true">
+        <!--[if IE 6]>
+    <style type="text/css">
+    /* <![CDATA[ */
+    html {
+        overflow-y: scroll;
+    }
+    /* ]]> */
+    </style>
+    <![endif]-->
+</head>
+
+<body>
+<div id="TooltipContainer" onmouseover="holdTooltip();" onmouseout="swapTooltip('default');"></div>
+    <div id="serverinfo">
+<a href="http://localhost/phpMyAdmin/main.php?token=2685c8bb9254f679378e3fb41263dfce" class="item">        <img class="icon" src="sql_data/s_host.png" alt="" width="16" height="16"> 
+Server: localhost</a>
+        <span class="separator"><img class="icon" src="sql_data/item_ltr.png" alt="-" width="5" height="9"></span>
+<a href="http://localhost/phpMyAdmin/db_structure.php?db=educationaldb&amp;token=2685c8bb9254f679378e3fb41263dfce" class="item">        <img class="icon" src="sql_data/s_db.png" alt="" width="16" height="16"> 
+Database: educationaldb</a>
+        <span class="separator"><img class="icon" src="sql_data/item_ltr.png" alt="-" width="5" height="9"></span>
+<a href="http://localhost/phpMyAdmin/tbl_structure.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce" class="item">        <img class="icon" src="sql_data/s_tbl.png" alt="" width="16" height="16"> 
+Table: users</a>
+</div><div id="topmenucontainer">
+<ul id="topmenu">
+<li><a class="tabactive" href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;goto=tbl_sql.php&amp;back=tbl_sql.php&amp;pos=0"><img class="icon" src="sql_data/b_browse.png" alt="Browse" width="16" height="16">Browse</a></li>
+<li><a class="tab" href="http://localhost/phpMyAdmin/tbl_structure.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;goto=tbl_sql.php&amp;back=tbl_sql.php"><img class="icon" src="sql_data/b_props.png" alt="Structure" width="16" height="16">Structure</a></li>
+<li><a class="tab" href="http://localhost/phpMyAdmin/tbl_sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;goto=tbl_sql.php&amp;back=tbl_sql.php"><img class="icon" src="sql_data/b_sql.png" alt="SQL" width="16" height="16">SQL</a></li>
+<li><a class="tab" href="http://localhost/phpMyAdmin/tbl_select.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;goto=tbl_sql.php&amp;back=tbl_sql.php"><img class="icon" src="sql_data/b_search.png" alt="Search" width="16" height="16">Search</a></li>
+<li><a class="tab" href="http://localhost/phpMyAdmin/tbl_change.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;goto=tbl_sql.php&amp;back=tbl_sql.php"><img class="icon" src="sql_data/b_insrow.png" alt="Insert" width="16" height="16">Insert</a></li>
+<li><a class="tab" href="http://localhost/phpMyAdmin/tbl_export.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;goto=tbl_sql.php&amp;back=tbl_sql.php&amp;single_table=true"><img class="icon" src="sql_data/b_tblexport.png" alt="Export" width="16" height="16">Export</a></li>
+<li><a class="tab" href="http://localhost/phpMyAdmin/tbl_import.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;goto=tbl_sql.php&amp;back=tbl_sql.php"><img class="icon" src="sql_data/b_tblimport.png" alt="Import" width="16" height="16">Import</a></li>
+<li><a class="tab" href="http://localhost/phpMyAdmin/tbl_operations.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;goto=tbl_sql.php&amp;back=tbl_sql.php"><img class="icon" src="sql_data/b_tblops.png" alt="Operations" width="16" height="16">Operations</a></li>
+<li><a class="tabcaution" href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;goto=tbl_sql.php&amp;back=tbl_sql.php&amp;sql_query=TRUNCATE+TABLE+%60users%60&amp;zero_rows=Table+users+has+been+emptied&amp;goto=tbl_structure.php" onclick="return confirmLink(this, 'TRUNCATE TABLE `users`')"><img class="icon" src="sql_data/b_empty.png" alt="Empty" width="16" height="16">Empty</a></li>
+<li><a class="tabcaution" href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;goto=tbl_sql.php&amp;back=tbl_sql.php&amp;reload=1&amp;purge=1&amp;sql_query=DROP+TABLE+%60users%60&amp;goto=db_structure.php&amp;zero_rows=Table+users+has+been+dropped" onclick="return confirmLink(this, 'DROP TABLE `users`')"><img class="icon" src="sql_data/b_deltbl.png" alt="Drop" width="16" height="16">Drop</a></li>
+</ul>
+<div class="clearfloat"></div></div>
+<br>
+
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+window.parent.updateTableTitle('educationaldb.users', '(2 Rows)');
+//]]>
+</script>
+<br>
+<div align="left">
+<div class="notice">Showing rows 0 - 1 (2 total, Query took 0.0009 sec)</div><fieldset class="">
+    <legend>SQL query:</legend>    <div>    <span class="syntax"><span class="syntax_alpha syntax_alpha_reservedWord">SELECT</span>  <span class="syntax_punct">*</span> <br><span class="syntax_alpha syntax_alpha_reservedWord">FROM</span>  <span class="syntax_quote syntax_quote_backtick">`users`</span> <span class="syntax_white syntax_white_newline"></span><br><span class="syntax_alpha syntax_alpha_reservedWord">LIMIT</span> <span class="syntax_digit syntax_digit_integer">0</span> <span class="syntax_punct syntax_punct_listsep">,</span> <span class="syntax_digit syntax_digit_integer">30</span></span>    </div></fieldset>
+<fieldset class="tblFooters"> [
+<a href="http://localhost/phpMyAdmin/tbl_sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;sql_query=SELECT+%2A+FROM+%60users%60&amp;show_query=1#querybox" onclick="window.parent.focus_querywindow('SELECT * FROM `users`'); return false;">Edit</a>
+] [
+<a href="http://localhost/phpMyAdmin/import.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;sql_query=EXPLAIN+SELECT+%2A+FROM+%60users%60">Explain SQL</a>
+] [
+<a href="http://localhost/phpMyAdmin/import.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;show_query=1&amp;sql_query=SELECT+%2A+FROM+%60users%60&amp;show_as_php=1">Create PHP Code</a>
+] [
+<a href="http://localhost/phpMyAdmin/import.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;show_query=1&amp;pos=0&amp;sql_query=SELECT+%2A+FROM+%60users%60">Refresh</a>
+]</fieldset></div><br>
+<fieldset><legend>Query results operations</legend>    <!-- Print view -->
+
+<a href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;pos=0&amp;session_max_rows=30&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;printview=1&amp;sql_query=SELECT+%2A+FROM+%60users%60" target="print_view"><img class="icon" src="sql_data/b_print.png" alt="Print view" width="16" height="16">Print view</a>
+
+    &nbsp;&nbsp;
+
+<a href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;pos=0&amp;session_max_rows=30&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;printview=1&amp;sql_query=SELECT+%2A+FROM+%60users%60&amp;dontlimitchars=1" target="print_view"><img class="icon" src="sql_data/b_print.png" alt="Print view (with full texts)" width="16" height="16">Print view (with full texts)</a>
+
+
+    <!-- Export -->
+    &nbsp;&nbsp;
+
+<a href="http://localhost/phpMyAdmin/tbl_export.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;pos=0&amp;session_max_rows=30&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;printview=1&amp;sql_query=SELECT+%2A+FROM+%60users%60&amp;unlim_num_rows=2&amp;single_table=true"><img class="icon" src="sql_data/b_tblexport.png" alt="Export" width="16" height="16">Export</a>
+
+</fieldset><br>
+<!-- Navigation bar -->
+<table cellspacing="0" cellpadding="2" border="0">
+<tbody><tr>
+    <td>
+    &nbsp;&nbsp;&nbsp;
+</td>
+<td align="center">
+    <form action="sql.php" method="post" onsubmit="return (checkFormElementInRange(this, 'session_max_rows', '%d is not valid row number.', 1) &amp;&amp; checkFormElementInRange(this, 'pos', '%d is not valid row number.', 0, 1))">
+        <input type="hidden" name="db" value="educationaldb">
+<input type="hidden" name="table" value="users">
+<input type="hidden" name="token" value="2685c8bb9254f679378e3fb41263dfce">
+        <input type="hidden" name="sql_query" value="SELECT+%2A+FROM+%60users%60">
+        <input type="hidden" name="goto" value="tbl_structure.php">
+        <input type="hidden" name="dontlimitchars" value="0">
+        <input type="submit" name="navig" value="Show :">
+        <input type="text" name="session_max_rows" size="3" value="30" class="textfield" onfocus="this.select()">
+        row(s) starting from record #
+        <input type="text" name="pos" size="6" value="0" class="textfield" onfocus="this.select()">
+        <br>
+        in 
+            <select name="disp_direction">
+                <option value="horizontal" selected="selected">horizontal</option>
+                <option value="horizontalflipped">horizontal (rotated headers)</option>
+                <option value="vertical">vertical</option>
+            </select>
+            mode and repeat headers after 
+            <input type="text" size="3" name="repeat_cells" value="100" class="textfield">
+            cells
+    </form>
+</td>
+<td>
+    &nbsp;&nbsp;&nbsp;
+</td>
+    
+</tr>
+</tbody></table>
+
+    
+<form action="sql.php" method="post">
+                    <input type="hidden" name="db" value="educationaldb">
+                    <input type="hidden" name="table" value="users">
+                    <input type="hidden" name="token" value="2685c8bb9254f679378e3fb41263dfce">
+<input type="hidden" name="pos" value="0">
+<input type="hidden" name="session_max_rows" value="30">
+<input type="hidden" name="disp_direction" value="horizontal">
+<input type="hidden" name="repeat_cells" value="100">
+<input type="hidden" name="dontlimitchars" value="0">
+Sort by key: <select name="sql_query">
+<option value="SELECT *FROM `users`  ORDER BY `UserID` ASC">PRIMARY (Ascending)</option>
+<option value="SELECT *FROM `users`  ORDER BY `UserID` DESC">PRIMARY (Descending)</option>
+<option value="SELECT *FROM `users` " selected="selected">None</option>
+</select>
+<input type="submit" value="Go">
+</form>
+<form method="post" action="tbl_row_action.php" name="rowsDeleteForm" id="rowsDeleteForm">
+    <input type="hidden" name="db" value="educationaldb">
+    <input type="hidden" name="table" value="users">
+    <input type="hidden" name="token" value="2685c8bb9254f679378e3fb41263dfce">
+<input type="hidden" name="disp_direction" value="horizontal">
+<input type="hidden" name="repeat_cells" value="100">
+<input type="hidden" name="dontlimitchars" value="0">
+<input type="hidden" name="pos" value="0">
+<input type="hidden" name="session_max_rows" value="30">
+<input type="hidden" name="goto" value="sql.php">
+<table id="table_results" class="data">
+<thead><tr>
+    <th colspan="3">
+<a href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;sql_query=SELECT+%2A+FROM+%60users%60&amp;session_max_rows=30&amp;pos=0&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;goto=tbl_structure.php&amp;dontlimitchars=1"><img class="fulltext" src="sql_data/s_fulltext.png" alt="Full Texts" title="Full Texts" width="50" height="20"></a>
+</th>
+            <th>
+<a href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;pos=0&amp;session_max_rows=30&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;dontlimitchars=0&amp;sql_query=SELECT+%2AFROM+%60users%60++ORDER+BY+%60users%60.%60UserID%60+ASC" title="Sort">UserID</a>
+</th><th>
+<a href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;pos=0&amp;session_max_rows=30&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;dontlimitchars=0&amp;sql_query=SELECT+%2AFROM+%60users%60++ORDER+BY+%60users%60.%60Type%60+ASC" title="Sort">Type</a>
+</th><th>
+<a href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;pos=0&amp;session_max_rows=30&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;dontlimitchars=0&amp;sql_query=SELECT+%2AFROM+%60users%60++ORDER+BY+%60users%60.%60age%60+ASC" title="Sort">age</a>
+</th><th>
+<a href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;pos=0&amp;session_max_rows=30&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;dontlimitchars=0&amp;sql_query=SELECT+%2AFROM+%60users%60++ORDER+BY+%60users%60.%60Gender%60+ASC" title="Sort">Gender</a>
+</th><th>
+<a href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;pos=0&amp;session_max_rows=30&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;dontlimitchars=0&amp;sql_query=SELECT+%2AFROM+%60users%60++ORDER+BY+%60users%60.%60Name%60+ASC" title="Sort">Name</a>
+</th><th>
+<a href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;pos=0&amp;session_max_rows=30&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;dontlimitchars=0&amp;sql_query=SELECT+%2AFROM+%60users%60++ORDER+BY+%60users%60.%60score%60+ASC" title="Sort">score</a>
+</th><th>
+<a href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;pos=0&amp;session_max_rows=30&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;dontlimitchars=0&amp;sql_query=SELECT+%2AFROM+%60users%60++ORDER+BY+%60users%60.%60comments%60+ASC" title="Sort">comments</a>
+</th><th>
+<a href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;pos=0&amp;session_max_rows=30&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;dontlimitchars=0&amp;sql_query=SELECT+%2AFROM+%60users%60++ORDER+BY+%60users%60.%60password%60+ASC" title="Sort">password</a>
+</th></tr>
+</thead>
+        <tbody>
+    <tr class="odd">
+    <td align="center">
+        <input type="checkbox" id="id_rows_to_delete0" name="rows_to_delete[+%60users%60.%60UserID%60+%3D+1]" onclick="copyCheckboxesRange('rowsDeleteForm', 'id_rows_to_delete0','l');" value="DELETE+FROM+%60users%60+WHERE+%60users%60.%60UserID%60+%3D+1+LIMIT+1">
+    </td>
+    <td align="center">
+
+<a href="http://localhost/phpMyAdmin/tbl_change.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;pos=0&amp;session_max_rows=30&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;dontlimitchars=0&amp;primary_key=+%60users%60.%60UserID%60+%3D+1&amp;sql_query=SELECT+%2A+FROM+%60users%60&amp;goto=sql.php"><img class="icon" src="sql_data/b_edit.png" alt="Edit" title="Edit" width="16" height="16"></a>
+    </td>
+    <td align="center">
+
+<a href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;pos=0&amp;session_max_rows=30&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;dontlimitchars=0&amp;sql_query=DELETE+FROM+%60users%60+WHERE+%60users%60.%60UserID%60+%3D+1+LIMIT+1&amp;zero_rows=The+row+has+been+deleted&amp;goto=sql.php%3Fdb%3Deducationaldb%26table%3Dusers%26token%3D2685c8bb9254f679378e3fb41263dfce%26pos%3D0%26session_max_rows%3D30%26disp_direction%3Dhorizontal%26repeat_cells%3D100%26dontlimitchars%3D0%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560users%2560%26zero_rows%3DThe%2Brow%2Bhas%2Bbeen%2Bdeleted%26goto%3Dtbl_structure.php" onclick="return confirmLink(this, 'DELETE FROM `users` WHERE `users`.`UserID` = 1 LIMIT 1')"><img class="icon" src="sql_data/b_drop.png" alt="Delete" title="Delete" width="16" height="16"></a>
+    </td>
+    <td class=" nowrap" align="right">1</td>
+    <td class="">Student</td>
+    <td class=" nowrap" align="right">22</td>
+    <td class="">Male</td>
+    <td class="">nou</td>
+    <td class=" nowrap" align="right">0</td>
+    <td class="">&nbsp;</td>
+    <td class="">nounourhan</td>
+</tr>
+            
+    <tr class="even">
+    <td align="center">
+        <input type="checkbox" id="id_rows_to_delete1" name="rows_to_delete[+%60users%60.%60UserID%60+%3D+2]" onclick="copyCheckboxesRange('rowsDeleteForm', 'id_rows_to_delete1','l');" value="DELETE+FROM+%60users%60+WHERE+%60users%60.%60UserID%60+%3D+2+LIMIT+1">
+    </td>
+    <td align="center">
+
+<a href="http://localhost/phpMyAdmin/tbl_change.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;pos=0&amp;session_max_rows=30&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;dontlimitchars=0&amp;primary_key=+%60users%60.%60UserID%60+%3D+2&amp;sql_query=SELECT+%2A+FROM+%60users%60&amp;goto=sql.php"><img class="icon" src="sql_data/b_edit.png" alt="Edit" title="Edit" width="16" height="16"></a>
+    </td>
+    <td align="center">
+
+<a href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;pos=0&amp;session_max_rows=30&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;dontlimitchars=0&amp;sql_query=DELETE+FROM+%60users%60+WHERE+%60users%60.%60UserID%60+%3D+2+LIMIT+1&amp;zero_rows=The+row+has+been+deleted&amp;goto=sql.php%3Fdb%3Deducationaldb%26table%3Dusers%26token%3D2685c8bb9254f679378e3fb41263dfce%26pos%3D0%26session_max_rows%3D30%26disp_direction%3Dhorizontal%26repeat_cells%3D100%26dontlimitchars%3D0%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560users%2560%26zero_rows%3DThe%2Brow%2Bhas%2Bbeen%2Bdeleted%26goto%3Dtbl_structure.php" onclick="return confirmLink(this, 'DELETE FROM `users` WHERE `users`.`UserID` = 2 LIMIT 1')"><img class="icon" src="sql_data/b_drop.png" alt="Delete" title="Delete" width="16" height="16"></a>
+    </td>
+    <td class=" nowrap" align="right">2</td>
+    <td class="">Student</td>
+    <td class=" nowrap" align="right">22</td>
+    <td class="">Male</td>
+    <td class="">rere</td>
+    <td class=" nowrap" align="right">0</td>
+    <td class="">&nbsp;</td>
+    <td class="">rer123</td>
+</tr>
+            
+</tbody>
+</table>
+
+    <img class="selectallarrow" src="sql_data/arrow_ltr.png" alt="With selected:" width="38" height="22">
+<a href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;sql_query=SELECT+%2A+FROM+%60users%60&amp;pos=0&amp;session_max_rows=30&amp;pos=0&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;goto=tbl_structure.php&amp;dontlimitchars=0&amp;checkall=1" onclick="if (markAllRows('rowsDeleteForm')) return false;">Check All</a>
+
+ / 
+
+<a href="http://localhost/phpMyAdmin/sql.php?db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;sql_query=SELECT+%2A+FROM+%60users%60&amp;pos=0&amp;session_max_rows=30&amp;pos=0&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;goto=tbl_structure.php&amp;dontlimitchars=0" onclick="if (unMarkAllRows('rowsDeleteForm')) return false;">Uncheck All</a>
+
+<i>With selected:</i>
+<button class="mult_submit" type="submit" name="submit_mult" value="Change" title="Change">
+<img class="icon" src="sql_data/b_edit.png" title="Change" alt="Change" width="16" height="16">
+</button>
+<button class="mult_submit" type="submit" name="submit_mult" value="Delete" title="Delete">
+<img class="icon" src="sql_data/b_drop.png" title="Delete" alt="Delete" width="16" height="16">
+</button>
+<button class="mult_submit" type="submit" name="submit_mult" value="Export" title="Export">
+<img class="icon" src="sql_data/b_tblexport.png" title="Export" alt="Export" width="16" height="16">
+</button>
+
+<input type="hidden" name="sql_query" value="SELECT * FROM `users`">
+<input type="hidden" name="pos" value="0">
+<input type="hidden" name="url_query" value="db=educationaldb&amp;table=users&amp;token=2685c8bb9254f679378e3fb41263dfce&amp;pos=0&amp;session_max_rows=30&amp;disp_direction=horizontal&amp;repeat_cells=100&amp;dontlimitchars=0">
+</form>
+<br>
+
+<!-- Navigation bar -->
+<table cellspacing="0" cellpadding="2" border="0">
+<tbody><tr>
+    <td>
+    &nbsp;&nbsp;&nbsp;
+</td>
+<td align="center">
+    <form action="sql.php" method="post" onsubmit="return (checkFormElementInRange(this, 'session_max_rows', '%d is not valid row number.', 1) &amp;&amp; checkFormElementInRange(this, 'pos', '%d is not valid row number.', 0, 1))">
+        <input type="hidden" name="db" value="educationaldb">
+<input type="hidden" name="table" value="users">
+<input type="hidden" name="token" value="2685c8bb9254f679378e3fb41263dfce">
+        <input type="hidden" name="sql_query" value="SELECT+%2A+FROM+%60users%60">
+        <input type="hidden" name="goto" value="tbl_structure.php">
+        <input type="hidden" name="dontlimitchars" value="0">
+        <input type="submit" name="navig" value="Show :">
+        <input type="text" name="session_max_rows" size="3" value="30" class="textfield" onfocus="this.select()">
+        row(s) starting from record #
+        <input type="text" name="pos" size="6" value="0" class="textfield" onfocus="this.select()">
+        <br>
+        in 
+            <select name="disp_direction">
+                <option value="horizontal" selected="selected">horizontal</option>
+                <option value="horizontalflipped">horizontal (rotated headers)</option>
+                <option value="vertical">vertical</option>
+            </select>
+            mode and repeat headers after 
+            <input type="text" size="3" name="repeat_cells" value="100" class="textfield">
+            cells
+    </form>
+</td>
+<td>
+    &nbsp;&nbsp;&nbsp;
+</td>
+    
+</tr>
+</tbody></table>
+
+    <script type="text/javascript" language="javascript">
+//<![CDATA[
+// updates current settings
+if (window.parent.setAll) {
+    window.parent.setAll('en-utf-8', 'utf8_unicode_ci', '1', 'educationaldb', 'users');
+}
+
+
+// set current db, table and sql query in the querywindow
+if (window.parent.refreshNavigation) {
+    window.parent.reload_querywindow(
+        'educationaldb',
+        'users',
+        'SELECT * FROM `users`');
+}
+
+
+if (window.parent.frame_content) {
+    // reset content frame name, as querywindow needs to set a unique name
+    // before submitting form data, and navigation frame needs the original name
+    if (window.parent.frame_content.name != 'frame_content') {
+        window.parent.frame_content.name = 'frame_content';
+    }
+    if (window.parent.frame_content.id != 'frame_content') {
+        window.parent.frame_content.id = 'frame_content';
+    }
+    //window.parent.frame_content.setAttribute('name', 'frame_content');
+    //window.parent.frame_content.setAttribute('id', 'frame_content');
+}
+//]]>
+</script>
+<div id="selflink" class="print_ignore">
+<a href="http://localhost/phpMyAdmin/index.php?goto=tbl_structure.php&amp;db=educationaldb&amp;table=users&amp;server=1&amp;target=sql.php&amp;token=2685c8bb9254f679378e3fb41263dfce" title="Open new phpMyAdmin window" target="_blank"><img class="icon" src="sql_data/window-new.png" alt="Open new phpMyAdmin window">Open new phpMyAdmin window</a>
+</div>
+
+
+</body></html>
